@@ -45,7 +45,7 @@ class SidangScreen extends StatelessWidget {
               children: [
                 // Ucapan selamat telah sidang
                 const Text(
-                  'Selamat Telah Sidang!',
+                  'Selamat Tidur!',
                   style: TextStyle(
                     fontSize: 36,
                     fontWeight: FontWeight.bold,
