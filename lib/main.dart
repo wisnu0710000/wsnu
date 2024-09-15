@@ -30,7 +30,8 @@ class SidangScreen extends StatelessWidget {
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/background.png'),
-                fit: BoxFit.cover, // Full screen background
+                fit: BoxFit.fitWidth, // Mengatur gambar agar memenuhi lebar layar
+                alignment: Alignment.centerLeft, // Menjaga bagian kiri gambar tidak terpotong
               ),
             ),
           ),
