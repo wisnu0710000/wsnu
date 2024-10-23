@@ -11,7 +11,7 @@ class SidangApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SidangScreen(),
+      home: const SidangScreen(),
     );
   }
 }
@@ -25,16 +25,6 @@ class SidangScreen extends StatelessWidget {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // Background Image
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/background.png'),
-                fit: BoxFit.fitWidth, // Mengatur gambar agar memenuhi lebar layar
-                alignment: Alignment.centerLeft, // Menjaga bagian kiri gambar tidak terpotong
-              ),
-            ),
-          ),
           // Semi-transparent overlay
           Container(
             color: Colors.black.withOpacity(0.5),
@@ -54,8 +44,7 @@ class SidangScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  'widihhh\n'
-                  'Pasti rasanya kaya lepas dari utang seumur hidup, kan?',
+                  'wow\nhalo?',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 24,
@@ -75,7 +64,7 @@ class SidangScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => MovingTextScreen()),
+                      MaterialPageRoute(builder: (context) => const MovingTextScreen()),
                     );
                   },
                   child: const Text(
@@ -119,15 +108,6 @@ class _MovingTextScreenState extends State<MovingTextScreen> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // Background Image di halaman kedua
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/background_.jpeg'),
-                fit: BoxFit.cover, // Full screen background
-              ),
-            ),
-          ),
           // Semi-transparent overlay
           Container(
             color: Colors.black.withOpacity(0.5),
@@ -139,8 +119,8 @@ class _MovingTextScreenState extends State<MovingTextScreen> {
             bottom: _isVisible ? 100 : -100, // Teks akan bergerak dari bawah ke atas
             left: 0,
             right: 0,
-            child: Center(
-              child: const Text(
+            child: const Center(
+              child: Text(
                 'semoga lancar di tantangan berikutnya launa!',
                 style: TextStyle(
                   fontSize: 32,
